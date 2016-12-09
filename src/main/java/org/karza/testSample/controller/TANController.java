@@ -2,8 +2,8 @@ package org.karza.testSample.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.data.rest.webmvc.BasePathAwareController;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.View;
@@ -11,15 +11,15 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.web.util.UriComponents;
 
-@BasePathAwareController
+@Controller
 public class TANController {
 
 	private static String BROWSER = "/browser";
 	private static String INDEX = "/index";
 
-	@RequestMapping(value = { "/", "" }, method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
+	@RequestMapping(value = { "/", "" }, method = RequestMethod.GET)
 	public String index(HttpServletRequest request) {
-		return "redirect:/index.html";
+		return  "index";
 	}
 
 	/**
