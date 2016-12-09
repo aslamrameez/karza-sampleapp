@@ -15,11 +15,11 @@ import org.springframework.web.util.UriComponents;
 public class TANController {
 
 	private static String BROWSER = "/browser";
-	private static String INDEX = "/index.html";
+	private static String INDEX = "/index";
 
 	@RequestMapping(value = { "/", "" }, method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
-	public View index(HttpServletRequest request) {
-		return getRedirectView(request, false);
+	public String index(HttpServletRequest request) {
+		return "redirect:/index.html";
 	}
 
 	/**
@@ -47,9 +47,9 @@ public class TANController {
 		UriComponents components = builder.build();
 		String path = components.getPath() == null ? "" : components.getPath();
 
-		if (!browserRelative) {
+		/*if (!browserRelative) {
 			builder.path(BROWSER);
-		}
+		}*/
 
 		builder.path(INDEX);
 		builder.fragment(browserRelative ? path.substring(0, path.lastIndexOf("/browser")) : path);
