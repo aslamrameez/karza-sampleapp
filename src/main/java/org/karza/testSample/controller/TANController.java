@@ -29,7 +29,7 @@ public class TANController {
 	 */
 	@RequestMapping(value = "/browser", method = RequestMethod.GET)
 	public View browser(HttpServletRequest request) {
-		return getRedirectView(request, request.getRequestURI().endsWith("/browser"));
+		return new RedirectView("index");
 	}
 
 	/**

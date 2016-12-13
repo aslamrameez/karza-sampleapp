@@ -3,10 +3,11 @@ server:
    sessionTimeout: 30
 
 spring:
-   view:
-    prefix: /WEB-INF
-    suffix: .html
-   jpa:
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .html
+  jpa:
      hibernate:
        ddl-auto: create-drop
 
@@ -16,7 +17,7 @@ security:
        
 # Tomcat
 tomcat:
-  accessLogEnabled: false
+  accessLogEnabled: true
   protocolHeader: x-forwarded-proto
   remoteIpHeader: x-forwarded-for
   backgroundProcessorDelay: 30
