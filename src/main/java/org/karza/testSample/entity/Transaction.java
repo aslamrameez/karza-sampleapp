@@ -25,4 +25,6 @@ public class Transaction {
 	private Long dealerno;
 	
 	private Status status;
+	
+	
 }

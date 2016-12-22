@@ -1,1 +1,64 @@
-Inside WEB-INF
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+     
+       <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+       <div class="container">
+       <div class="col s2"></div>
+       <div class="col s8">
+     <nav>
+     <div class="nav-wrapper">
+        <a href="#" class="brand-logo right">Welcome to Karza</a>
+       <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="index.html">Search</a></li>
+        <li><a href="create.html">Create</a></li>
+      </ul>
+    </div>
+    </nav>
+       </div>
+       <div class="col s2"></div>
+       </div>
+       <div class="row">
+       <div class="col s3"></div>
+    <form class="col s6" id="myform">
+      <div class="row">
+        <div class="input-field col s3">
+          <input  id="tin" type="text" class="validate">
+          <label for="Tin">Tin</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="pan" type="text" class="validate">
+          <label for="Pan">Pan</label>
+        </div>
+        </div>
+         <div class="row">
+        <div class="col s2"></div>
+         <div class="col s2">
+         <a class="waves-effect waves-light btn-large" href="#" id="searchDealer">Search</a>
+         </div>
+          <div class="col s2"></div>
+       </div>
+      
+      <div class="col s3"></div>
+    </form>
+  </div>
+  <div class="row" id="result">
+   <div class="col s3"></div>
+    <div class="col s6"></div>
+   <div class="col s3"></div>
+  </div>
+    </body>
+  </html>
+        

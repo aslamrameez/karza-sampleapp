@@ -14,9 +14,4 @@ security:
    basic:
      enabled: false       
 logging.level.org.springframework.web: DEBUG
-# Tomcat
-tomcat:
-  accessLogEnabled: true
-  protocolHeader: x-forwarded-proto
-  remoteIpHeader: x-forwarded-for
-  backgroundProcessorDelay: 30
+
